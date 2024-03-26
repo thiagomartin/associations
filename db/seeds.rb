@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+d1 = Doctor.create(name: "Estranho2")
+d2 = Doctor.create(name: "Banner 2")
+
+p1 = Patient.create(name: "Shaft")
+p2 = Patient.create(name: "Thiago")
+
+Appointment.create(doctor: d1, patient: p1, date: Date.today )
+Appointment.create(doctor: d2, patient: p2, date: Date.today )
+Appointment.create(doctor: d1, patient: p2, date: Date.today )
+Appointment.create(doctor: d2, patient: p1, date: Date.today )
